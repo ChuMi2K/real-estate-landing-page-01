@@ -9,12 +9,37 @@
         <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
@@ -30,27 +55,49 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+            integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Header -->
+        <!-- PC Header -->
         <header class="fixed-header">
             <div class="content">
                 <!-- Navbar -->
                 <nav class="navbar">
+                    <!-- Tablet/Mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
                     <a href="#">
-                        <img src="./assets/img/logo.svg" alt="Besnik." />
+                        <img class="logo" src="./assets/img/logo.svg" alt="Besnik." />
                     </a>
 
                     <!-- Navigation -->
-                    <ul>
+                    <ul id="pcNav">
                         <li><a href="#">Home</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobile separate"><a href="#!">Sign In</a></li>
+                        <li class="show-on-mobile"><a href="#!">Sign Up</a></li>
                     </ul>
 
                     <!-- Action (Sign in - Sign up) -->
@@ -59,6 +106,31 @@
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
                 </nav>
+            </div>
+        </header>
+
+        <!-- Tablet/Mobile Header -->
+        <header class="mobile-header">
+            <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="./assets/img/logo.svg" alt="Besnik." />
+                </a>
+
+                <!-- Navigation -->
+                <ul id="mobileNav">
+                    <script>
+                        const pcNav = document.querySelector('#pcNav');
+                        const mobileNav = document.querySelector('#mobileNav');
+                        mobileNav.innerHTML = pcNav.innerHTML;
+                    </script>
+                </ul>
             </div>
         </header>
 
@@ -96,7 +168,7 @@
                     </div>
                     <div class="row row-desc">
                         <p class="desc">More than 45,000+ companies trust besnik</p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                     </div>
                     <div class="images">
                         <a href="#!">
@@ -242,6 +314,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="view-all show-on-mobile">
+                        <a href="#!" class="btn">View All Properties</a>
                     </div>
                 </div>
             </div>

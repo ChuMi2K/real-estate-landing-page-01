@@ -1,0 +1,248 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Tablet And Mobile */
+@media screen and (max-width: 991px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .toggle-menu {
+        cursor: pointer;
+    }
+
+    .toggle-menu svg {
+        width: 24px;
+        color: #666;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background-color: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 60px;
+    }
+
+    .menu-checkbox:checked ~ .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+
+    .menu-drawer ul a {
+        color: #333;
+        display: block;
+        padding: 14px 0;
+        font-weight: 500;
+    }
+
+    .separate {
+        border-top: 1px solid #000;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero .info {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .clients .images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guide-item {
+        margin: 0;
+        flex: 1;
+    }
+
+    .featured {
+        padding: 110px 0;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats .row {
+        flex-direction: column;
+    }
+
+    .stats .row.row-qty {
+        flex-direction: row;
+    }
+
+    .stats .info {
+        order: 1;
+        padding: 0;
+    }
+
+    .stats .img-block {
+        order: 2;
+        margin-top: 80px;
+    }
+
+    .stats .info .sub-title {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .stats .info .desc {
+        width: 70%;
+        margin: 16px auto auto;
+    }
+
+    .qty-item .qty {
+        font-size: 5rem;
+    }
+
+    .qty-item .qty-desc {
+        font-size: 1.5rem;
+    }
+
+    .subscription .image {
+        display: none;
+    }
+
+    .footer .row {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        row-gap: 80px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 25% 0 0;
+    }
+
+    .navbar .actions {
+        display: none;
+    }
+
+    .hero .title {
+        margin-top: 16px;
+        font-size: 5rem;
+    }
+
+    .clients .images {
+        row-gap: 16px;
+    }
+
+    .list-guide {
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    .item .info .label {
+        font-size: 1.3rem;
+    }
+
+    .featured .link {
+        display: none;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+    }
+
+    .view-all {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stats .img-block {
+        padding-left: 0;
+    }
+
+    .stats .info .sub-title {
+        width: 100%;
+    }
+
+    .stats .row.row-qty {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .subscription .body {
+        height: auto;
+    }
+
+    .subscription .info {
+        padding: 60px;
+    }
+
+    .footer .row {
+        grid-template-columns: 1fr;
+    }
+}
